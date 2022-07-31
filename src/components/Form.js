@@ -13,11 +13,16 @@ export default class Search extends React.Component {
         }
     }
 
+    doSearch = (e)=>{
+        e.preventDefault()
+
+    }
+    
     render() {
 
         return (
             <div className='formDiv'>
-                <Form onSubmit={this.getCity}>
+                <Form onSubmit={this.doSearch}>
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
 
