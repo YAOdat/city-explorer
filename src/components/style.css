@@ -2,6 +2,7 @@
 
 *{
     background-color: #010215;
+    color: #47d3a9;
 }
 
 
@@ -29,14 +30,18 @@ footer {
     background-color: #010215;
 }
 
-#formInput {
-    color: #47d3a9;
-    border: solid #47d3a9 2px;
-    border-radius: 10px;
+#main-btn {
+   background-color: #47d3c1;
+   color: #010215;
+   width: 155px;
+   border-radius: 7px;
 }
 
-#formLabel{
-    color: #47d3a9;
+#inputID {
+    
+    border: #47d3a9 solid 1px;
+   width: 600px;
 }
+
 
 
