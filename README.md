@@ -1,4 +1,4 @@
-# Project Name
+# City Explorer
 
 **Author**: Yaser Odat
 **Version**: 1.0.0 
@@ -20,3 +20,15 @@ This application was built using React JS, Bootstrap, and Location IQ
 ## Credit and Collaborations
 Waleed Afifi,
 TA's at ASAC - JavaScript Course
+
+________________________
+
+Name of feature: City Explorer - Search, Show Map, Get Data
+
+Estimate of time needed to complete: 8 hours
+
+Start time: 2:30 PM 31/07/2022
+
+Finish time: 7:00 PM 1/08/2022
+
+Actual time needed to complete: 11 hours
