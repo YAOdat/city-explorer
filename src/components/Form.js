@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './style.css';
 import axios from 'axios';
+import Weather from './Weather'
 
 
 export default class Search extends React.Component {
@@ -32,12 +33,26 @@ export default class Search extends React.Component {
         cityInformation: response.data[0],
         lat: response.data[0].lat,
         lon: response.data[0].lon,
+        
       });
 
+      const weather =  axios.get('http://localhost:4001/weather?', {params: 
+      {lattitude: lat, 
+      longitude: lon,
+      searchQuery: this.state.display_name
+    }})
+    this.setState ({
+      weather: weatherData,
+    })
 
     });
+
+
+
   }
 
+
+ 
 
   render() {
     return (
@@ -63,7 +78,7 @@ export default class Search extends React.Component {
           <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.bd985e4e701a5b53341ec9e721b6098a&q&center=${this.state.cityInformation.lat},${this.state.cityInformation.lon}&zoom=10`} alt='' />
         }
 
-  
+          <Weather weather ={this.state.weather}/>
 
       </div>
 
