@@ -5,11 +5,13 @@ export default class Weather extends React.Component{
 
         return (
             <>
-                <p>{this.props.weather.date}</p>
-                <p>{this.props.weather.description}</p>
+             {this.props.weather.data.map(item =>
+                <li>{item.date} : {item.descriptioin}</li>
+              )
+              }
+
             </>
-
-
+           
         )
     }
 }
