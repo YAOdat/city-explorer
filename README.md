@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Yaser Odat
-**Version**: 1.0.0 
+**Version**: 1.0.1 
 
 ## Overview
 A web application that takes a city name from the user and provides the latitude and longitude of the city. It also displays a map of the city entered by the user.
@@ -32,3 +32,15 @@ Start time: 2:30 PM 31/07/2022
 Finish time: 7:00 PM 1/08/2022
 
 Actual time needed to complete: 11 hours
+
+
+
+Name of feature: add weather feature from the locally created server
+
+Estimate of time needed to complete: 8 hours
+
+Start time: 5:30 PM 2/08/2022
+
+Finish time: 5:05 PM 3/08/2022
+
+Actual time needed to complete: 9 hours
