@@ -45,3 +45,15 @@ Start time: 5:30 PM 2/08/2022
 Finish time: 5:05 PM 3/08/2022
 
 Actual time needed to complete: 9 hours
+
+
+
+Name of feature: adding movie search feature
+
+Estimate of time needed to complete: 10 hours
+
+Start time: 3/08/2022
+
+Finish time: 05/8/2022
+
+Actual time needed to complete: 15 hours
