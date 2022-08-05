@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Yaser Odat
-**Version**: 1.0.1 
+**Version**: 1.0.2 
 
 ## Overview
 A web application that takes a city name from the user and provides the latitude and longitude of the city. It also displays a map of the city entered by the user.
@@ -15,7 +15,8 @@ This application was built using React JS, Bootstrap, and Location IQ
 
 ## Change Log
 
-2022/08/01
+2022/08/01 added weather feature
+2022/08/05 added movie search feature
 
 ## Credit and Collaborations
 Waleed Afifi,
