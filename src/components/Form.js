@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import './style.css';
 import axios from 'axios';
 import Movie from './Movie'
+import Weather from './Weather';
 
 
 
@@ -46,7 +47,7 @@ export default class Search extends React.Component {
 
     });
 
-
+    
   }
 
   displayMap = (lat, lon) => {
@@ -99,10 +100,11 @@ export default class Search extends React.Component {
         {this.state.cityName &&
           <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.bd985e4e701a5b53341ec9e721b6098a&q&center=${this.state.cityInformation.lat},${this.state.cityInformation.lon}&zoom=10`} alt='' />
         }
-
         {this.state.weather.map(item =>
-          <li>{item.date} : {item.description}</li>
+          <li >📅 {item.date} : 🌥️ {item.description}: 🌡️ Highest Temperature: {item.highestTemp}</li>
         ) }
+
+        <div>_______________________________________</div>
 
         <Movie movie={this.state.movies} />
       </div>
