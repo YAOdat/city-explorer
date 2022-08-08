@@ -3,6 +3,7 @@ import React from "react"
 export default class SingleMovie extends React.Component {
 
     render() {
+        
         if (this.props.movieDetails.image_url !== 'https://image.tmdb.org/t/p/w500null') {
             return (
                 <div>

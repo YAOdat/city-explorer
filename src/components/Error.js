@@ -5,10 +5,10 @@ export default class Error extends React.Component {
 
     render() {
         return (
-            <Alert variant="success">
-                <Alert.Heading>Sorry</Alert.Heading>
+            <Alert variant="info">
+                <Alert.Heading>Sorry!</Alert.Heading>
                 <p>
-                The city you are looking for doesn't exist in our database
+                The city you are looking for doesn't exist in our database.
                 </p>
                 <hr />
                 <p className="mb-0">

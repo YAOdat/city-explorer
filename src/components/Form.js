@@ -21,6 +21,7 @@ export default class Search extends React.Component {
       displayError: false,
       weather: [],
       movies:[],
+      error:undefined,
     }
   };
 
@@ -37,15 +38,20 @@ export default class Search extends React.Component {
     console.log(e)
     console.log(this.state.cityName)
 
+    this.setState ({
+      error: undefined
+    })
+
     
       const city = axios.get(`https://eu1.locationiq.com/v1/search.php?key=pk.bd985e4e701a5b53341ec9e721b6098a&q=${this.state.cityName}&format=json`).then(response => {
-        console.log(response.data[0], 'line33')
+        console.log(response===undefined)
         console.log(AxiosError.code)
         this.setState({
           cityInformation: response.data[0],
           display_name: response.data[0].display_name,
           lat: response.data[0].lat,
           lon: response.data[0].lon,
+          error: 'no error'
         });
   
 
@@ -63,11 +69,6 @@ export default class Search extends React.Component {
   
       });
 
-
-     
-
-    
-  
     
     
   }
@@ -117,10 +118,10 @@ export default class Search extends React.Component {
           <Button id='main-btn' variant="primary" type="submit"> Explore! </Button>
 
         </Form>
-        {this.state.displayError &&
+        {this.state.error===undefined &&
           <Error/> 
         }
-      
+       
         <p>{this.state.cityInformation.display_name}</p>
         <p> Latitude : {this.state.cityInformation.lat}</p>
         <p> Longitude : {this.state.cityInformation.lon}</p>
