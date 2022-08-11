@@ -122,20 +122,24 @@ export default class Search extends React.Component {
           <Error/> 
         }
        
+       {this.state.error !== undefined &&
+       <div>
         <p>{this.state.cityInformation.display_name}</p>
         <p> Latitude : {this.state.cityInformation.lat}</p>
         <p> Longitude : {this.state.cityInformation.lon}</p>
-
-        {this.state.cityName &&
+        </div>} 
+        
+        {this.state.cityName && this.state.error !== undefined &&
           <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.bd985e4e701a5b53341ec9e721b6098a&q&center=${this.state.cityInformation.lat},${this.state.cityInformation.lon}&zoom=10`} alt='' />
         }
-        {this.state.weather.map(item =>
+        
+        { this.state.error!==undefined && this.state.weather.map(item =>
           <li >📅 {item.date} : 🌥️ {item.description}: 🌡️ Highest Temperature: {item.highestTemp}</li>
         ) }
 
         <div>_______________________________________</div>
-
-        <Movie movie={this.state.movies} />
+        { this.state.error!==undefined && 
+        <Movie movie={this.state.movies} />}
       </div>
 
     )
